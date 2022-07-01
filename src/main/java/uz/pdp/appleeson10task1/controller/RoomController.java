@@ -11,6 +11,7 @@ import uz.pdp.appleeson10task1.payload.RoomDto;
 import uz.pdp.appleeson10task1.repository.HotelRepo;
 import uz.pdp.appleeson10task1.repository.RoomRepo;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -42,5 +43,11 @@ public class RoomController {
         Pageable pageable = PageRequest.of(page,10);
         Page<Room> allBy_hotelId = roomRepo.findRoomByHotel_Id(hotelId, pageable);
         return allBy_hotelId;
+    }
+
+    @GetMapping
+    public List<Room> getAll(){
+        List<Room> all = roomRepo.findAll();
+        return all;
     }
 }
