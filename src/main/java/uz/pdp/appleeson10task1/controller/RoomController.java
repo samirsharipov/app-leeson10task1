@@ -44,9 +44,4 @@ public class RoomController {
         return allBy_hotelId;
     }
     
-    @GetMapping
-    public List<Room> getAll(){
-        List<Room> list = roomRepo.findAll();
-        return list;
-    }
 }
