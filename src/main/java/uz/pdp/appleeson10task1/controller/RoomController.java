@@ -43,4 +43,10 @@ public class RoomController {
         Page<Room> allBy_hotelId = roomRepo.findRoomByHotel_Id(hotelId, pageable);
         return allBy_hotelId;
     }
+    
+    @GetMapping
+    public List<Room> getAll(){
+        List<Room> list = roomRepo.findAll();
+        return list;
+    }
 }
