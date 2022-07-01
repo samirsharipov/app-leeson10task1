@@ -49,5 +49,6 @@ public class RoomController {
     public List<Room> getAll(){
         List<Room> all = roomRepo.findAll();
         return all;
+
     }
 }
